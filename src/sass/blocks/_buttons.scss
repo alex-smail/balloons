@@ -1,0 +1,33 @@
+// .button {
+.button {
+    width: 27.7rem;
+    height: 5.4rem;
+    border-radius: 5rem;
+    background: #FFF;
+    border: none;
+    color: #777777;
+    font-size: 2rem;
+    font-weight: 400;
+    letter-spacing: 0.5rem;
+    text-transform: uppercase;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &_header {
+        margin-top: 5rem;
+        cursor: pointer;
+        animation: buttonUp 2s ease-in-out 1s 1;
+        transition: transform 0.5s ease-in-out;
+
+        &:hover {
+            transform: scale(1.1);
+        }
+
+        &:not(:hover) {
+            transform: scale(1);
+            transition: transform 0.5s ease-in-out; /* Добавляем анимацию для плавного возврата в начальное значение */
+        }
+    }
+}
