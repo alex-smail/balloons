@@ -1,0 +1,60 @@
+.adventure {
+    width: 100%;
+    min-height: 89rem;
+    background: linear-gradient(90deg, rgba($color-brown-light, 0.7), rgba($color-black, 0.7)), url(../../src/image/adventure_background.png) bottom left / cover no-repeat;
+    clip-path: polygon(0 5%, 100% 20%, 100% 87%, 0 74%);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: auto;
+    justify-content: center;
+    box-shadow: $shadow;
+
+    &__card {
+        width: 24rem;
+        height: 30rem;
+        background-color: $color-white;
+        border-radius: .5rem;
+        opacity: .75;
+        display: flex;
+        flex-direction: column;
+        transform: translateY(0rem);
+        animation-fill-mode: backwards;
+        transition: transform 0.3s ease-in-out;
+        cursor: pointer;
+
+        &:not(:last-child) {
+            margin-right: 6rem;
+        }
+
+        &:hover {
+            transform: translateY(-.9rem);
+            animation-fill-mode: backwards;
+        }
+    }
+
+    &__image {
+        width: 6.2rem;
+        height: 6.2rem;
+        margin: 2.5rem auto;
+    }
+
+    &__title {
+        color: $color-grey;
+        font-size: 2rem;
+        font-weight: 700;
+        letter-spacing: 3px;
+        margin: 0 auto;
+        text-transform: uppercase;
+    }
+
+    &__dsr {
+        color: $color-grey;
+        text-align: center;
+        font-size: 1.6rem;
+        font-weight: 400;
+        letter-spacing: .2rem;
+        word-spacing: .2rem;
+        margin: 1rem 1rem 3rem;
+    }
+}

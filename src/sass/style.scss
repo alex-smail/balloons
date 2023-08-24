@@ -1,23 +1,10 @@
 @import 'libs/normalize';
 @import 'libs/font';
-@import 'blocks/animation';
-
-* {
-    font-family: 'Roboto', sans-serif;
-}
-
-html {
-    font-size: 62.5%;
-}
-
-body {
-    padding: 50px;
-}
-
-.container {
-    background-color: #F7F7F7;
-}
-
+@import 'base/animation';
+@import 'base/variables';
+@import 'base/mixins';
+@import 'blocks/base';
 @import 'blocks/header';
 @import 'blocks/buttons';
 @import 'blocks/description';
+@import 'blocks/adventure';
