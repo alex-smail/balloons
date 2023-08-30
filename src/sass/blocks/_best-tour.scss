@@ -1,0 +1,140 @@
+.best-tour {
+
+    &__title {
+        @include text-gradient;
+        font-size: 3.6rem;
+        font-weight: 800;
+        letter-spacing: 1rem;
+        text-transform: uppercase;
+        text-align: center;
+        margin: 0;
+        margin-top: -3rem;
+        text-shadow:  $shadow;
+        word-spacing: 1rem;
+    }
+
+
+    &__cards {
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        margin: 8rem auto;
+        justify-content: space-evenly;
+    }
+
+    &__card {
+        perspective: 150rem;
+        width: 34.1rem;
+        height: 52rem;
+        backface-visibility: hidden;
+        transition: .7s all ease-out;
+        border-radius: .5rem;
+        position: relative;
+
+        &_front {
+            position: absolute;
+            top: 0;
+            left: 0;
+            background-color: $color-white;
+            box-shadow:  $shadow;
+        }
+
+        &_back {
+            @include background-gradient;
+            transform: rotateY(180deg);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            box-shadow:  $shadow;
+        }
+
+        &:hover &_front {
+            transform: rotateY(-180deg);
+        }
+        &:hover &_back {
+            transform: rotateY(0deg);
+        }
+    }
+
+    &__image {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 76%);
+    }
+
+    &__subtitle {
+        color: $color-white;
+        text-align: right;
+        font-size: 2.8rem;
+        font-weight: 300;
+        letter-spacing: .2rem;
+        margin: 0;
+        text-transform: uppercase;
+        position: relative;
+
+        &_span {
+            @include background-gradient;
+            position: absolute;
+            right: 0;
+            
+            &_1 {
+                padding: 1rem 1.5rem 0 2rem;
+                top: -7.4rem;
+            }
+            &_2 {
+                padding: .2rem 1.8rem 1rem 1rem;
+                top: -3.5rem;
+            }
+        }
+    }
+
+    &__dsr {
+        list-style-type: none;
+        color: $color-grey;
+        font-size: 1.6rem;
+        font-weight: 700;
+        letter-spacing: .2rem;
+        padding: 0;
+        margin-top: 4rem;
+        text-align: center;
+        
+        &_back {
+            color: $color-white;
+            font-size: 1.6rem;
+            font-weight: 300;
+            letter-spacing: .2rem;
+            text-transform: uppercase;
+            margin: 10rem auto 0;
+        }
+    }
+
+    &__item {
+        border-bottom: 1px solid $color-grey;;
+        margin: 0 auto;
+        color: $color-grey;
+        display: inline-block;
+        
+
+        &:not(:last-child) {
+            margin-bottom: 2rem;
+        }
+    }
+
+    &__sum {
+        color: $color-white;
+        font-size: 6rem;
+        font-weight: 300;
+        letter-spacing: .2rem;
+        margin: 8.7rem auto;
+    }
+}
+
+@media screen and (max-width: 390px) {
+    .best-tour {
+        &__card {
+            perspective: 5rem;
+        }
+        &__cards {
+            flex-direction: column;
+        }
+    }
+
+}
