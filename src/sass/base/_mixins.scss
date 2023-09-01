@@ -13,3 +13,11 @@
 @mixin background-gradient {
     background-image: linear-gradient(140deg, $color-brown-light 51.65%, $color-brown-darck 87%);
 }
+
+@mixin title {
+    font-size: 3.6rem;
+    font-weight: 800;
+    letter-spacing: 1rem;
+    text-transform: uppercase;
+    text-align: center;
+}

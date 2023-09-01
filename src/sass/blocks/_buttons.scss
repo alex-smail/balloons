@@ -30,4 +30,8 @@
             transition: transform 0.5s ease-in-out; /* Добавляем анимацию для плавного возврата в начальное значение */
         }
     }
+    &_feedback {
+        margin: 1.5rem auto 8rem;
+        z-index: 1;
+    }
 }

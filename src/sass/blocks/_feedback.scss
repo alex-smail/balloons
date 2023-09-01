@@ -1,0 +1,102 @@
+.feedback {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+
+    &__video {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 0;
+        object-fit: cover;
+    }
+
+    &__title {
+        @include title;
+        color: $color-white;
+        text-shadow:  $shadow;
+        margin: 8rem auto 9.5rem;
+        z-index: 1;
+    }
+
+    &-card {
+        background-color: $color-white;
+        width: 65%;
+        // height: 200px;
+        clip-path: polygon(12.5% 0, 98% 0, 87% 100%, 2% 100%);
+        padding: 4rem 8rem 2.5rem 15rem;
+        margin: 0;
+        z-index: 1;
+        opacity: .8;
+        margin-bottom: 8rem;
+
+        &__img {
+            border-radius: 50%;
+            img {
+                transform: scale(1);
+            }
+            float: left;
+            shape-outside: circle(50%);
+            margin-right: 6rem;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        &__title {
+            color: $color-grey;
+            font-size: 2rem;
+            font-weight: 700;
+            letter-spacing: .2rem;
+            margin: 0;
+            margin-top: 1.5rem;
+        }
+
+        &__dsr {
+            color: $color-grey;
+            font-size: 1.6rem;
+            font-weight: 400;
+            letter-spacing: .2rem;
+            margin: 1rem 10.5rem 0 0;
+        }
+
+        &__name {
+            color: $color-white;
+            text-align: center;
+            font-size: 2.4rem;
+            font-weight: 400;
+            letter-spacing: .2rem;
+            position: absolute;
+            top: 35%;
+            left: 5%;
+            text-transform: uppercase;
+            transform: translateY(80%);
+            transition: 1s all ease-out;
+            z-index: -1;
+        }
+
+        &:hover &__name {
+            transform: translateY(0%);
+            z-index: 0;
+        }
+        &:hover img {
+            transform: scale(.95);
+            filter: blur(.3rem) brightness(70%);
+            transition: .4s all ease-out;
+        }
+    }
+}
+
+.bg {
+    @include background-gradient;
+    z-index: 1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, rgba($color-brown-light, 0.7), rgba($color-black, 0.7));
+}
