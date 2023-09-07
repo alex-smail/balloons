@@ -1,0 +1,19 @@
+.form-reservations {
+    @include background-gradient;
+    padding: 10rem;
+
+    &__card {
+        background: linear-gradient(107deg, rgba(255,255,255,1) 0%, rgba(255,255,255,0.8) 55.5%, rgba(186,133,84,0.1) 55.5%, rgba(161,79,3,0.1) 100%) ,url(../image/form-reservations.jpeg) left / 135rem no-repeat;
+        
+        padding: 5rem 0 .7rem 5rem;
+
+    }
+
+    &__title {
+        @include title;
+        @include text-gradient;
+        margin: 0;
+        margin-bottom: 3rem;
+        text-align: left;
+    }
+}

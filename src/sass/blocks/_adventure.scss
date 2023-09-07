@@ -48,11 +48,7 @@
     }
 
     &__dsr {
-        color: $color-grey;
-        text-align: center;
-        font-size: 1.6rem;
-        font-weight: 400;
-        letter-spacing: .2rem;
+        @include subtitle;
         word-spacing: .2rem;
         margin: 1rem 1rem 3rem;
     }

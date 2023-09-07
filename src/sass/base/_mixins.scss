@@ -21,3 +21,10 @@
     text-transform: uppercase;
     text-align: center;
 }
+
+@mixin subtitle {
+    color: $color-grey;
+    font-size: 1.6rem;
+    font-weight: 400;
+    letter-spacing: .2rem;
+}

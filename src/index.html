@@ -154,6 +154,38 @@
                 </div>
                 <button class="button button_feedback">Забронировать</button>
             </section>
+
+            <section class="form-reservations">
+                <div class="form-reservations__card">
+                    <h2 class="form-reservations__title">Забронировать тур</h2>
+                    <form action="#" class="form">
+                        <fieldset class="form__info">
+                            <input class="form__input" type="text" placeholder="Имя Фамилия" id="name" required>
+                            <label class="form__label" for="name">Ваше Имя и Фамилия</label>
+
+                            <input class="form__input" type="email" placeholder="Почтовый адрес" id="email" required>
+                            <label class="form__label" for="email">Ваш email</label>
+                        </fieldset>
+
+                        <fieldset class="form__radio-block">
+                            <label class="form__radio-label">
+                                <input class="form__radio-input" required type="radio" name="tour">
+                                <span class="form__radio-button form__radio-button-1"></span>
+                                Групповой тур
+                            </label>
+
+                            
+                            <label class="form__radio-label">
+                                <input class="form__radio-input" required type="radio" name="tour">
+                                <span class="form__radio-button
+                                form__radio-button-2"></span>
+                                Индивидуальный тур
+                            </label>
+                        </fieldset>
+                        <button type="submit" class="button button_form">Забронировать</button>
+                    </form>
+                </div>
+            </section>
         </main>
     </div>
 </body>
