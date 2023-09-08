@@ -1,0 +1,32 @@
+.footer {
+    background-color: $color-black;
+    padding: 8rem 23.5rem;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    &__logo {
+        width: 12rem;
+        height: 15rem;
+        margin-bottom: 3.5rem;
+    }
+
+    &__links {
+        // flex-direction: row;
+        display: inline-flex;
+        gap: 5rem;
+        padding: 0;
+    }
+
+    &__link {
+        @include subtitle;
+        text-transform: uppercase;
+        list-style-type: none;
+        text-decoration: none;
+        font-weight: 300;
+    }
+
+    &__item {
+        text-decoration: none;
+        color: $color-white;
+    }
+}
