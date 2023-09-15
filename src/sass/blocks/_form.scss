@@ -101,3 +101,58 @@
         
     }
 }
+
+@media screen and (max-width: 430px) {
+    .form {
+    
+        &__input {
+            width: 53rem;
+            height: 8.5rem;
+            font-size: 3rem;
+            padding-left: 4rem;
+            border: .1rem solid $color-brown-light;
+            border-radius: 1rem;
+        }
+    
+        &__label {
+            font-size: 2.5rem;
+            top: 129px;
+            &:not(:last-of-type) {
+                top: 5.5rem;
+            }
+        }
+    
+        &__radio-label {
+            font-size: 3rem;
+            padding-left: 3rem;
+            display: flex;
+            margin-left: 2rem;
+            
+            &:not(:last-child) {
+                margin-right: 3rem;
+                padding-bottom: 3rem;
+            }
+        }
+    
+        &__radio-input {
+            &:checked + span {
+                &::after {
+                    height: 3.5rem;
+                    width: 3.5rem;
+                }
+            }
+        }
+    
+        &__radio-button {
+            width: 4.5rem;
+            height: 4.5rem;
+            &-1 {
+                left: -1px;
+            }
+            &-2 {
+                top: 30px;
+                left: -1px;
+            }
+        }
+    }
+}

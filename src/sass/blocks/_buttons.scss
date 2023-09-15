@@ -42,3 +42,16 @@
         padding: 0;
     }
 }
+
+
+@media screen and (max-width: 430px) {
+    .button {
+        width: 45rem;
+        height: 11rem;
+        font-size: 3.5rem;
+
+        &_form {
+            margin: 8rem 0 5rem;
+        }
+    }
+}

@@ -42,3 +42,32 @@
         animation: rightToLeft 1.7s ease-in-out 1s;
     }
 }
+
+@media screen and (max-width: 430px) {
+    .header {
+        height: 93rem;
+        &__nav-container {
+            display: flex;
+            justify-content: space-between;
+            padding: 5rem;
+        }
+        &__logo {
+            width: 10.6rem;
+            height: 12rem;
+            order: 2;
+        }
+        &__nav-button {
+            width: 12rem;
+            height: 12rem;
+            order: 1;
+        }
+        &__title {
+            margin: 1.1rem 5rem 2.5rem;
+            font-size: 6rem;
+        }
+        &__description {
+            font-size: 5rem;
+            margin: 0 18rem;
+        }
+    }
+}

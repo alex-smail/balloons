@@ -1,5 +1,6 @@
 .adventure {
     width: 100%;
+    max-width: 140rem;
     min-height: 89rem;
     background: linear-gradient(90deg, rgba($color-brown-light, 0.7), rgba($color-black, 0.7)), url(../../src/image/adventure_background.png) bottom left / cover no-repeat;
     clip-path: polygon(0 5%, 100% 20%, 100% 87%, 0 74%);
@@ -9,7 +10,7 @@
     margin: auto;
     justify-content: center;
     box-shadow: $shadow;
-
+    
     &__card {
         width: 24rem;
         height: 30rem;
@@ -20,6 +21,7 @@
         flex-direction: column;
         transform: translateY(0rem);
         transition: transform 0.3s ease-in-out;
+        text-align: center;
         cursor: pointer;
 
         &:not(:last-child) {
@@ -51,5 +53,48 @@
         @include subtitle;
         word-spacing: .2rem;
         margin: 1rem 1rem 3rem;
+        align-content: center;
     }
+}
+
+
+
+@media screen and (max-width: 430px) {
+    .adventure {
+        // flex-wrap: wrap;
+        height: 100rem;
+        gap: 5rem;
+        align-content: center;
+        padding-bottom: 15rem;
+        overflow: scroll;
+        padding-top: 10rem;
+        // clip-path: polygon(0 5%, 100% 11%, 100% 87%, 0 80%);
+        &__card {
+            width: 36rem;
+            height: 60rem;
+            padding: 0 3rem;
+            &:not(:last-child) {
+
+                margin-right: 0;
+            }
+        }
+
+        &__image {
+            width: 11.2rem;
+            height: 11.2rem;
+        }
+    
+        &__title {
+            font-size: 3.5rem;
+        }
+    
+        &__dsr {
+            @include subtitle;
+            font-size: 3.4rem;
+            margin-top: 3rem;
+            text-align: center;
+            letter-spacing: 1px;
+        }
+    }
+    
 }
